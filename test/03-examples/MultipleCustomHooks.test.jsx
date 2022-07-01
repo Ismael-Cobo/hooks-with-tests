@@ -27,7 +27,6 @@ describe('MultipleCustomHooks test', () => {
 
     render(<MultipleCustomHooks />)
 
-    screen.debug()
     expect(screen.getByText('Loading...'))
     expect(screen.getByRole('button', { name: 'Next quote' }).disaabled)
   })
@@ -42,8 +41,6 @@ describe('MultipleCustomHooks test', () => {
     })
 
     render(<MultipleCustomHooks />)
-
-    screen.debug()
 
     expect(screen.getByText('Ismael')).toBeTruthy()
     expect(screen.getByText('Hola mundo!')).toBeTruthy()
